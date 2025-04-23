@@ -24,10 +24,12 @@ PATH=$PATH:`pwd` #aggiunge la dir corrente al path
 export PATH
 
 MAX_DIR=/tmp/.maxDir #Crea una variabile chiamata MAX_DIR, che punta a un file temporaneo /tmp/.maxDir
-export MAX_DIR #visibile allo ricorsivo 
+export MAX_DIR #visibile alla ricorsiva
 > $MAX_DIRscript #lo inizializza (crea e svuota il file).
 
-MAX_HIT=/tmp/.maxHit; export MAX_HIT; echo 0 > $MAX_HIT
+MAX_HIT=/tmp/.maxHit #Crea una variabile chiamata MAX_DIR, che punta a un file temporaneo /tmp/.maxHit
+export MAX_HIT #visibile alla ricorsiva 
+echo 0 > $MAX_HIT
 
 trova_script_ric.sh "$1"
 
