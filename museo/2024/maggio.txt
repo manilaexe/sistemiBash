@@ -1,0 +1,5 @@
+20230512,E412,La Primavera,Sandro Botticelli
+20230512,E412,Il David,Michelangelo Buonarroti
+20230520,BA39,Guernica,Pablo Picasso
+20230520,BA39,Les Demoiselles d'Avignon,Pablo Picasso
+20230525,E412,La Notte Stellata,Vincent van Gogh
