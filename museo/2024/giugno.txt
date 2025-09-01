@@ -1,0 +1,6 @@
+20230605,E412,Il Cenacolo,Leonardo da Vinci
+20230610,BA39,Il Bacio,Gustav Klimt
+20230612,E412,La Creazione di Adamo,Micheangelo Buonarroti
+20230615,CD21,Notte a Parigi,Claude Monet
+20230618,BA39,Guernica,Pablo Picasso
+20230620,E412,Venere di Urbino,Tiziano Vecellio
