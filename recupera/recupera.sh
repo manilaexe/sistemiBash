@@ -1,5 +1,7 @@
 #!/bin/bash
 #ESAME DEL 14-08-2020
+#stampa anche head: impossibile aprire '*.bak' per la lettura: File o directory non esistente ma non so cosa farci (non ne ho voglia)
+
 
 #controllo degli argomenti
 if test $# -ne 3 #controllo che gli elemento passati siasno esattamente 3
