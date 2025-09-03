@@ -1,31 +1,48 @@
 #!/bin/bash
 
-# Cambio current path
-cd "$1" #entra nella directory passata come parametro
+#ESAME 16-06-2020
 
-# Ripristino i file e conto le occorrenze
+#Programma che aiuta nella ricerca di file di script
+#Interfaccia: trova_script <dir>
+#dir e` un nome assoluto di directory
+#Cerca in modo ricorsivo in dir tutti i file con estensione .sh, leggibili e scrivibili e con all'interno la stringa !#/bin/bash
+#I nome dei file che soddisfano i requisiti vengono salvati su un file script.txt nella home dir, se non esiste va creato
+#Al temine viene scritto a video il nome della sottodirectory con il maggior numero di file che soddisfano i requisiti
+
+dir=$1
 COUNTER=0
-for i in `ls *.sh 2> /dev/null` #cicla sui file .sh nella dir | 2>.... serve per nascondere gli errori nel caso non ci fossero file .sh
-do
-     if test -f $i -a -r $i -a -w $i -a `grep -c "#!/bin/bash" $i` -gt 0
-	#controlla: -f se il file è normale; -r se è leggibile; -w se è scrivibile; almeno una riga che contiene "#!/bin/bash" e grep -c le conta
-     then #se tutto vero ->
-         echo `pwd`/$i >> $LIST_FILE #redireziona l'output con il percorso del file dentro $LIST_FILE
-         COUNTER=`expr $COUNTER + 1` #counter++
-     fi
+
+#cambio del path
+cd $dir
+
+for f in *.sh #per ogni file che finisce con .sh
+do 
+    if test "$f" = "*.sh"
+    then
+        continue
+    fi
+
+    if test -f $f -a -r $f -a -w $f #se e` un file E e` leggibile E e` scrivibile E contiene la stringa #!/bin/bash
+    then
+        if test `grep -c "#!/bin/bash" $f` -gt 0 
+        then
+            echo `pwd`/$f >> $LIST_FILE #scrive il nome del file nel LIST_FILE
+            COUNTER=`expr $COUNTER + 1` #aggiorna il counter
+        fi
+    fi
 done
 
-if test `cat $MAX_HIT` -lt $COUNTER #confronta il numero di script trovati (counter) con il numero massimo trovato fino ad ora (MAX_HIT)
-then #se maggiore...
-   echo $COUNTER > $MAX_HIT 
-   echo `pwd` > $MAX_DIR #$MAX_HIT con il nuovo valore, e $MAX_DIR con la directory corrente.
+if test `cat $MAX_HIT` -lt $COUNTER #guarda se esiste un nuovo massimo
+then #se esiste:
+    echo $COUNTER > $MAX_HIT #nuovo massimo
+    echo `pwd` > $MAX_DIR #nuova directory con il massimo
 fi
 
-# Ricorsione
-for dir in * #scorre tutto i lcontenuto della dir corrente
-do
-   if test -d "$dir" -a -x "$dir" #controlla: -d se è una dir; -x se è eseguibile 
-   then
-       trova_script_ric.sh "$dir" #richiama se stesso nella sotto dir
-   fi
+#ricorsione
+for d in * #per ogni cosa in nella cartela guardo se: 
+do 
+    if test -d $d -a -x $d #se e` una cartela E se e` eseguibile
+    then #se si parte la ricorsione   
+        $0 "$d" 
+    fi
 done
