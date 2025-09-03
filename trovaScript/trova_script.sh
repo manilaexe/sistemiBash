@@ -1,39 +1,57 @@
 #!/bin/bash
-#file che lancia il ricorsivo
-if test $# -ne 1 #controlla se è stato passato ESATTAMENTE UN ARGOMENTO
+
+#ESAME 16-06-2020
+
+#Programma che aiuta nella ricerca di file di script
+#Interfaccia: trova_script <dir>
+#dir e` un nome assoluto di directory
+#Cerca in modo ricorsivo in dir tutti i file con estensione .sh, leggibili e scrivibili e con all'interno la stringa !#/bin/bash
+#I nome dei file che soddisfano i requisiti vengono salvati su un file script.txt nella home dir, se non esiste va creato
+#Al temine viene scritto a video il nome della sottodirectory con il maggior numero di file che soddisfano i requisiti
+
+#controllo gli argomenti
+if test $# -ne 1 #l'argomento deve essere solo uno
 then
-	echo "Errore: uso $0 <dir>"
-	exit 1
+    echo "Uso: $0 <dir>";
+    exit 1
 fi
 
-case $1 in
-      /*) if test ! -d "$1" -o ! -x "$1" #Se l'argomento è un path assoluto (cioè inizia con /) allora controlla se non è una directory oppure se non è accessibile
-          then
-            echo $1 non è una directory o non si hanno i diritti di accesso
+dir=$1
+
+case $dir in
+    /*) if test ! -d $dir #controllo che dir sia affettivamente una directory
+        then   
+            echo "$dir deve essere una directory"
             exit 2
-          fi;;
-      *) echo $1 non è un path assoluto
-         exit 3;;
+        fi
+        if test ! -x $dir #controllo di avere i permessi di esecuzione
+        then   
+            echo "non ho i permessi di esecuzione su $dir"
+            exit 3
+        fi;;
+    *) echo "$dir deve essere un path assoluto" #controllo che sia un path assoluto
+        exit 4;;
 esac
 
-LIST_FILE=$HOME/script.txt; export LIST_FILE #crea una variabile dd'ambiente chhe contiene il percorso si script.txt nella home
-					     #export rende la variabile visibile anhce ai processi figli (lo script ricorsivo)
-touch $LIST_FILE #Crea il file script.txt se non esiste, oppure aggiorna la data di modifica se esiste già.
-
-PATH=$PATH:`pwd` #aggiunge la dir corrente al path
+#esporto il PATH
+PATH=$PATH:`pwd`
 export PATH
 
-MAX_DIR=/tmp/.maxDir #Crea una variabile chiamata MAX_DIR, che punta a un file temporaneo /tmp/.maxDir
-export MAX_DIR #visibile alla ricorsiva
-> $MAX_DIRscript #lo inizializza (crea e svuota il file).
+#file dove scrivere i nomi dei file .sh
+LIST_FILE=$HOME/script.txt
+export LIST_FILE
+touch $LIST_FILE #se non esiste crea il file vuoto, se esiste gia` aggiorna la data di modifica senza cancellare il contenuto
 
-MAX_HIT=/tmp/.maxHit #Crea una variabile chiamata MAX_DIR, che punta a un file temporaneo /tmp/.maxHit
-export MAX_HIT #visibile alla ricorsiva 
+#variabile per il nome della sottodirectory con il maggior numero di file che soddisfano i requisiti
+MAX_DIR=/tmp/MAX_DIR.tmp
+export MAX_DIR
+
+MAX_HIT=/tmp/MAX_HIT.tmp #questa mi serve per tenere il conto
+export MAX_HIT
+
+echo ""> $MAX_DIR
 echo 0 > $MAX_HIT
 
-trova_script_ric.sh "$1"
+trova_script_ric.sh "$dir"
 
-echo La directory contenente il maggior numero di script è `cat $MAX_DIR` con `cat $MAX_HIT` occorrenze totali.
-
-rm $MAX_DIR
-rm $MAX_HIT
+echo "Sottodirectory con il maggior numero di files che soffisfano i requisiti: `cat $MAX_DIR`"
