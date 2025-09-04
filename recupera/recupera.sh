@@ -1,7 +1,15 @@
 #!/bin/bash
 #ESAME DEL 14-08-2020
-#stampa anche head: impossibile aprire '*.bak' per la lettura: File o directory non esistente ma non so cosa farci (non ne ho voglia)
+#ATTENZIONE: stampa anche head: impossibile aprire '*.bak' per la lettura: File o directory non esistente ma non so cosa farci (non ne ho voglia)
 
+#Programma che aiuti a recuperare documenti di testo  erroneamente cancellati. 
+#Interfaccia: recupera <dir> <recuperati> <titolo>
+#Dove: dir e recuperati sono nomi assoluti di directory e titolo e` una stringa di testo che  l’utente sa essere il titolo del documento, presente sulla prima riga all’interno del file.  
+#Il file comandi si basa sull’assunzione che ciascun file sia stato duplicato all’interno della  stessa directory del file originale col suffisso aggiuntivo “.bak”. 
+#Il file comandi deve: 
+    #esplorare in modo ricorsivo la directory dir per cercare tutti i file  leggibili dall’utente il cui nome termini con “.bak” e che all’interno contengano la stringa  titolo nella prima riga
+    #Tali file devono essere copiati nella directory recuperati. Se la  directory recuperati non esiste, deve essere creata.  
+    #Al termine delle operazioni, il file comandi scrive a video il nome della sottodirectory che  contiene il maggior numero di file recuperati e anche il numero totale di file recuperati.
 
 #controllo degli argomenti
 if test $# -ne 3 #controllo che gli elemento passati siasno esattamente 3
