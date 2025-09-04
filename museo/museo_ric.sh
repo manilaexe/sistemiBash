@@ -1,5 +1,17 @@
 #!/bin/bash
 #ESAME DEL 25-06-2023
+#Programma per aiutare il curatore di un museo a consultare le opere esposte per una determinata esposizione durante un anno specifico. 
+#Interfaccia: museo <esposizione> <anno>
+#Dove esposizione e` un stringa alfanumerica che identifica univocamente una certa esposizione organizzata dal museo
+#E anno e` un nome relativo di directory formato da soli caratteri numerici.
+#Si supponga che le informazioni sulle opere esposte nel corso dell'anno siano memorizzate all'interno della directory anno (o in una delle sue sottodirectory) in file di testo con estensione .txt.
+#Ciascuna riga di tali file conterrà le informazioni relative a un’opera esposta in una certa esposizione con, in quest’ordine, la data di inizio dell’esposizione (nel formato AAAAMMGG), l’identificativo univoco dell’esposizione (E412, BA39, etc.), il titolo dell’opera e l'artista.
+#Lo script deve: 
+    #esplorare ricorsivamente la directory anno e tutte le sottodirectory per analizzare le informazioni presenti nei file .txt
+    #selezionare esclusivamente le informazioni relative alle opere dell’esposizione di interesse ed estrarre le (sole) informazioni su data e titolo e quindi scrivere tali dati in un file di log nella home directory
+    #Se il file di log esiste già, lo script deve sovrascriverne il contenuto
+    #Prima di terminare, deve stampare a video il mese (il nome del file corrispondente, comprensivo di suffisso .txt) in cui sono state esposte più opere
+
 
 #assegno a delle variabili i parametri che gli ho passato da museo.sh
 esposizione=$1
