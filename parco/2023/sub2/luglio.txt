@@ -1,0 +1,3 @@
+OBS0201,20230701,Orso,Montagna,Giorgio Marrone
+OBS0202,20230705,Lupo,Prateria,Lucia Rosa
+OBS0203,20230710,Orso,Lago,Alberto Bianco
