@@ -1,4 +1,0 @@
-OBS0101,20230402,Lupo,Collina,Giulia Neri
-OBS0102,20230405,Volpe,Bosco,Marco Gallo
-OBS0103,20230410,Lupo,Fiume,Anna Blu
-OBS0104,20230411,Lupo,Pianura,Pietro Gialli
