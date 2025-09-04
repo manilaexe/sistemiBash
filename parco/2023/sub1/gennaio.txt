@@ -1,0 +1,3 @@
+OBS0001,20230105,Lupo,Bosco,Mario Rossi
+OBS0002,20230107,Orso,Valle,Luisa Bianchi
+OBS0003,20230112,Lupo,Prato,Carlo Verdi
