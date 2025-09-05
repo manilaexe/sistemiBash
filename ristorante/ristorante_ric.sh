@@ -23,6 +23,7 @@ for f in *.log
 do
     if test -f "$f" -a -r "$f"
     then   
+        COUNTER=$(grep -c "$piatto" "$f")
         if test `grep -c "$piatto" $f` -gt 0 
         then
             grep "$piatto" "$f" | cut -d "," -f3 >> "$LIST_MAX"
