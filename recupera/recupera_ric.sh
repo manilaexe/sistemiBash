@@ -32,7 +32,7 @@ do
     fi
 done
 
-if test `cat $MAX_HIT` -lt $COUNTER #`cat $MAX_HIT`: legge il numero massimo di sile trovati fino ad ora
+if test `cat $MAX_HIT` -lt $COUNTER #`cat $MAX_HIT`: legge il numero massimo di file trovati fino ad ora
                                     #-lt: lessThan, controlla che il numero in $MAX_HIT sia minore di quello in $COUNTER
 then 
     echo $COUNTER > $MAX_HIT #aggiorna MAX_HIT con counter
