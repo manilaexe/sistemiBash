@@ -6,7 +6,7 @@
 #Interfaccia: trova_script <dir>
 #dir e` un nome assoluto di directory
 #Cerca in modo ricorsivo in dir tutti i file con estensione .sh, leggibili e scrivibili e con all'interno la stringa !#/bin/bash
-#I nome dei file che soddisfano i requisiti vengono salvati su un file script.txt nella home dir, se non esiste va creato
+#I nomi dei file che soddisfano i requisiti vengono salvati su un file script.txt nella home dir, se non esiste va creato
 #Al temine viene scritto a video il nome della sottodirectory con il maggior numero di file che soddisfano i requisiti
 
 dir=$1
