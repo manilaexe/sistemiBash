@@ -40,7 +40,7 @@ then
 fi
 
 TOT=`cat $TOTALE` #assegno a TOT il valore contenuto nel file tmp TOTALE 
-echo `expr $TOT + $COUNTER` > $TOTALE #faccio la domma di TOT e del COUNTER e reindirizzo tutto nel file tmp TOTALE
+echo `expr $TOT + $COUNTER` > $TOTALE #faccio la somma di TOT e del COUNTER e reindirizzo tutto nel file tmp TOTALE
 
 #ricorsione
 for d in * #guardo ogni cosa nella cartella dove mi trovo
