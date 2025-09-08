@@ -1,0 +1,5 @@
+45,B0021,Azione,Top Gun
+50,B0022,Drammatico,Il Postino
+30,B0023,Commedia,La Famiglia Addams
+25,B0024,Horror,It
+70,B0025,Azione,Avengers
