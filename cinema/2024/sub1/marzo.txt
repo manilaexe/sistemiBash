@@ -1,0 +1,5 @@
+70,B0011,Azione,Matrix
+55,B0012,Drammatico,Il Postino
+40,B0013,Commedia,Il Grande Bluff
+30,B0014,Horror,It
+25,B0015,Azione,Top Gun
