@@ -1,0 +1,5 @@
+60,B0006,Azione,Top Gun
+45,B0007,Drammatico,La Vita è Bella
+35,B0008,Commedia,La Famiglia Addams
+20,B0009,Horror,It
+50,B0010,Azione,Avengers
