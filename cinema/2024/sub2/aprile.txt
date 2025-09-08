@@ -1,0 +1,5 @@
+80,B0016,Azione,Avengers
+35,B0017,Drammatico,La Vita è Bella
+20,B0018,Commedia,Il Grande Bluff
+10,B0019,Horror,It
+60,B0020,Azione,Matrix
