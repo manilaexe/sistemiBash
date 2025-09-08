@@ -1,0 +1,6 @@
+T0401,20230502,Autobus,Napoli,Sara Gialli
+T0402,20230506,Camion,Firenze,Carlo Neri
+T0403,20230511,Autobus,Bari,Luca Verdi
+T0404,20230515,Autobus,Roma,Francesca Rosa
+T0405,20230520,Autobus,Milano,Giovanni Rossi
+T0406,20230525,Camion,Bologna,Marco Bianchi
