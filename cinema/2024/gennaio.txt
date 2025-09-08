@@ -1,0 +1,5 @@
+50,B0001,Azione,Avengers
+30,B0002,Drammatico,Il Pianista
+20,B0003,Commedia,Il Grande Bluff
+40,B0004,Azione,Matrix
+25,B0005,Horror,It
