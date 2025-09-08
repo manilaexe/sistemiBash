@@ -1,0 +1,3 @@
+T0301,20230401,Treno,Roma,Anna Neri
+T0302,20230407,Autobus,Milano,Giovanni Rossi
+T0303,20230412,Autobus,Torino,Marco Bianchi
