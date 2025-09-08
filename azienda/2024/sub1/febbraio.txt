@@ -1,0 +1,4 @@
+T0101,20230203,Camion,Genova,Paolo Blu
+T0102,20230210,Autobus,Bologna,Sara Gialli
+T0103,20230215,Autobus,Roma,Francesca Rosa
+T0104,20230222,Autobus,Milano,Carlo Neri
