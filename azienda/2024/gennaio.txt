@@ -1,0 +1,4 @@
+T0001,20230105,Autobus,Roma,Giovanni Rossi
+T0002,20230110,Camion,Milano,Marco Bianchi
+T0003,20230115,Autobus,Napoli,Luca Verdi
+T0004,20230120,Treno,Firenze,Anna Neri
