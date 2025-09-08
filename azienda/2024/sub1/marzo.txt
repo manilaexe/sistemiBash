@@ -1,0 +1,5 @@
+T0201,20230302,Autobus,Genova,Giovanni Rossi
+T0202,20230308,Autobus,Torino,Luca Verdi
+T0203,20230314,Camion,Napoli,Marco Bianchi
+T0204,20230320,Autobus,Firenze,Sara Gialli
+T0205,20230325,Autobus,Roma,Francesca Rosa
