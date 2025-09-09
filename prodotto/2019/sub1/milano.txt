@@ -1,0 +1,6 @@
+
+Pane,MulinoBianco,Italia,80,1kg,ScaffaleA,20240102
+Latte,Parmalat,Italia,350,1L,Frigo1,20240104
+Mela,Melinda,Italia,220,500g,ScaffaleB,20240108
+Uova,FattoriaVerdi,Italia,180,6pz,Frigo2,20240109
+Pasta,DeCecco,Italia,500,500g,ScaffaleC,20240106
