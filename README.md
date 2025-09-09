@@ -1,1 +1,1 @@
-Esercizi predi da esami di anni precedenti di programmazione in shell
+Esercizi presi da esami di anni precedenti di programmazione in shell
