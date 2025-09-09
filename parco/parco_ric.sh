@@ -24,7 +24,7 @@ do
     if test -f "$f" -a -r "$f"  #guarda i permessi
     then 
         COUNTER=`wc -l < "$f"` #assegna al counter il numero di righe del file
-        if test `cat $MAX_HIT` -lt "$COUNTER"  #confronta il MAX_HITA con il counter attuale
+        if test `cat $MAX_HIT` -lt "$COUNTER"  #confronta il MAX_HIT con il counter attuale
         then #se il counter e` maggiore
             echo $COUNTER > $MAX_HIT #sostituisce con il nu9ovo valore del counter
             echo "${f%.txt}" > $MAX_MESE #scrive in MAX_MESE il nuovo nome del file con il numero massimo di osservazioni
