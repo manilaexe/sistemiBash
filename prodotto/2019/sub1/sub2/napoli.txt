@@ -1,0 +1,5 @@
+Pane,FornoSud,Italia,300,1kg,ScaffaleA,20240102
+Latte,Granarolo,Italia,400,1L,Frigo1,20240108
+Mela,Melinda,Italia,280,500g,ScaffaleB,20240110
+Uova,FattoriaRossi,Italia,100,6pz,Frigo2,20240104
+Pasta,Barilla,Italia,600,500g,ScaffaleC,20240109
