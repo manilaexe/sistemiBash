@@ -1,0 +1,5 @@
+Pane,Barilla,Italia,120,1kg,ScaffaleA,20240101
+Latte,Granarolo,Italia,200,1L,Frigo1,20240105
+Mela,Melinda,Italia,300,500g,ScaffaleB,20240110
+Uova,FattoriaRossi,Italia,150,6pz,Frigo2,20240103
+Pasta,Barilla,Italia,400,500g,ScaffaleC,20240107
